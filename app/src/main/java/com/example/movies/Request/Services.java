@@ -2,7 +2,7 @@ package com.example.movies.Request;
 
 import static com.example.movies.Utiles.Credentials.BASE_URL;
 
-import com.example.movies.Utiles.MovieApi;
+import com.example.movies.Utiles.Api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -15,9 +15,9 @@ public class Services {
 
     private static Retrofit retrofit =retrofitBuilder.build();
 
-    private static MovieApi movieApi = retrofit.create(MovieApi.class);
+    private static Api api = retrofit.create(Api.class);
 
-    public static MovieApi getMovieApi(){
-        return movieApi;
+    public static Api getApi(){
+        return api;
     }
 }

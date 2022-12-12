@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Series.SeriesActivity"
+    android:background="@color/black">
+
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/seriesRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item" />
+
+    <EditText
+        android:id="@+id/searchSeriesEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/search_bar"
+        android:ems="10"
+        android:hint="Search Series"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingTop="7dp"
+        android:paddingEnd="42dp"
+        android:paddingBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/app_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:onClick="search"
+        app:layout_constraintBottom_toBottomOf="@+id/searchSeriesEt"
+        app:layout_constraintEnd_toEndOf="@+id/searchSeriesEt"
+        app:layout_constraintTop_toTopOf="@+id/searchSeriesEt"
+        app:srcCompat="@drawable/search_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

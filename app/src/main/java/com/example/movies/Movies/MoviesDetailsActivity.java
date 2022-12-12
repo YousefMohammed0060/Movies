@@ -1,23 +1,19 @@
-package com.example.movies;
+package com.example.movies.Movies;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.movies.Models.MovieModel;
+import com.example.movies.R;
 import com.squareup.picasso.Picasso;
 
-public class DetailsActivity extends AppCompatActivity {
+public class MoviesDetailsActivity extends AppCompatActivity {
     ImageView posterIv;
     TextView releaseDateTv,overviewTv,titleTv;
     RatingBar ratingBar;
@@ -25,7 +21,7 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+        setContentView(R.layout.activity_movie_details);
         movie = getIntent().getParcelableExtra("movie");
         posterIv=findViewById(R.id.posterIv);
         releaseDateTv=findViewById(R.id.releaseDateTv);
@@ -39,10 +35,6 @@ public class DetailsActivity extends AppCompatActivity {
         ratingBar.setRating(10-movie.getVote_average());
     }
 
-    public void backStep(View view) {
-        startActivity(new Intent(DetailsActivity.this,MainActivity.class));
-        finish();
-    }
 
 
 }

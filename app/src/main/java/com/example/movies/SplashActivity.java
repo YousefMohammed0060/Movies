@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import com.example.movies.Movies.MovieActivity;
+import com.example.movies.Series.SeriesActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         Runnable runnable=new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 finish();
             }
         };

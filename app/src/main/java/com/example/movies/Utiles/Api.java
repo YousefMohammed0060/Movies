@@ -1,12 +1,14 @@
 package com.example.movies.Utiles;
 
 import com.example.movies.Response.MovieSearchResponse;
+import com.example.movies.Response.SeriesSearchResponse;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface MovieApi {
-
+public interface Api {
+// Movies
     @GET("movie/popular")
     Call<MovieSearchResponse> popularMovie(
             @Query("api_key") String key,
@@ -33,4 +35,31 @@ public interface MovieApi {
             @Query("query") String movie
     );
 
+
+//Series
+    @GET("tv/popular")
+    Call<SeriesSearchResponse> popularSeries(
+            @Query("api_key") String key,
+            @Query("page") int page
+    );
+    @GET("tv/airing_today")
+    Call<SeriesSearchResponse> airingTodaySeries(
+            @Query("api_key") String key,
+            @Query("page") int page
+    );
+    @GET("tv/on_the_air")
+    Call<SeriesSearchResponse> onTheAirSeries(
+            @Query("api_key") String key,
+            @Query("page") int page
+    );
+    @GET("tv/top_rated")
+    Call<SeriesSearchResponse> topRatedSeries(
+            @Query("api_key") String key,
+            @Query("page") int page
+    );
+    @GET("search/tv")
+    Call<SeriesSearchResponse> searchSeries(
+            @Query("api_key") String key,
+            @Query("query") String movie
+    );
 }

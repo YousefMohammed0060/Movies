@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailsActivity"
+    tools:context=".Movies.MoviesDetailsActivity"
     android:background="@color/black">
 
     <ScrollView
@@ -68,17 +68,6 @@
                 app:layout_constraintStart_toStartOf="@+id/releaseDateTv"
                 app:layout_constraintTop_toBottomOf="@+id/releaseDateTv" />
 
-            <ImageView
-                android:id="@+id/backBtn"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/back_btn"
-                android:onClick="backStep"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/back" />
 
             <TextView
                 android:id="@+id/titleTv"
